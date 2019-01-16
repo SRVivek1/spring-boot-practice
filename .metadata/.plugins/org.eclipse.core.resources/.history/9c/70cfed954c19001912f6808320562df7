@@ -1,0 +1,79 @@
+/**
+ * 
+ */
+package viveksingh.restful.controller;
+
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import viveksingh.restful.bean.PersonV1;
+import viveksingh.restful.bean.PersonV2;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class HelloVersioningService {
+
+	// Start - URI versioning method
+
+	@GetMapping(path = "/uri/v1")
+	public PersonV1 getUriVersioningV1() {
+		return new PersonV1("Vivek Singh");
+	}
+
+	@GetMapping(path = "/uri/v2")
+	public PersonV2 getUriVersioningV2() {
+		return new PersonV2("Vivek", "Singh");
+	}
+
+	// End - URI Versioning
+
+	// Start : Request Param versioning
+
+	@GetMapping(path = "/param", params = "version=1")
+	public PersonV1 getParamVersioningV1() {
+		return new PersonV1("Vivek Singh");
+	}
+
+	@GetMapping(path = "/param", params = "version=2")
+	public PersonV2 getParamVersioningV2() {
+		return new PersonV2("Vivek", "Singh");
+	}
+
+	// End : Request Param versioning
+	
+	
+	// Start : Custom Header versioning
+	
+	@GetMapping(path = "/custom/header", headers = "X-APP-VERSION=1")
+	public PersonV1 getHeaderVersioningV1() {
+		return new PersonV1("Vivek Singh");
+	}
+
+	@GetMapping(path = "/custom/header", headers = "X-APP-VERSION=2")
+	public PersonV2 getHeaderVersioningV2() {
+		return new PersonV2("Vivek", "Singh");
+	}
+	
+	// End : Custom Header versioning
+	
+	
+	
+	// Start : MediaType (Content Negotiation or accept header ) versioning
+	
+	@GetMapping(path = "/custom/mediatype")
+	public PersonV1 getMediaTypeVersioningV1() {
+		return new PersonV1("Vivek Singh");
+	}
+
+	@GetMapping(path = "/custom/mediatype")
+	public PersonV2 getMediaTypeVersioningV2() {
+		return new PersonV2("Vivek", "Singh");
+	}
+	
+	// End : MediaType (Content Negotiation or accept header ) versioning
+	
+}

@@ -1,0 +1,13 @@
+package viveksingh.restful.i18n;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldRestController {
+
+	private void sayHello() {
+
+		String message = "Hello X";
+		return message;
+	}
+}

@@ -1,0 +1,5 @@
+package viveksingh.restful.i18n;
+
+public class HelloWorldRestController {
+
+}

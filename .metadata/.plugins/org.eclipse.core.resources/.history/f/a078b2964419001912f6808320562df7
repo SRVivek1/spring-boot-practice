@@ -1,0 +1,14 @@
+package viveksingh.restful.versioning;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication(scanBasePackages="viveksingh.restful")
+public class VersioningApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(VersioningApplication.class, args);
+	}
+
+}
+

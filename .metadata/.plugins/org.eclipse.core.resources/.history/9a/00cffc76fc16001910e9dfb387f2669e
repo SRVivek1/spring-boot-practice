@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package viveksingh.restful.app;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class UserResource {
+
+	//- Retrieve all users -- GET /users
+	public List<User> getUsers
+	
+	//- Create user        -- POST /users 
+	//- Retrieve one user  -- GET /users/{id}  --> /user/145084
+	//- Delete one user    -- DELETE /users/{id}
+}

@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package viveksingh.restful.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class I18nTestController {
+
+	public String sayHello() {
+		return "Hello MR. X.";
+	}
+}

@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package viveksingh.restful.bean;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class PersonV2 {
+
+	private String fName;
+	
+	private String lName;
+
+	/**
+	 * @param fName
+	 * @param lName
+	 */
+	public PersonV2(String name) {
+		super();
+		this.name = name;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

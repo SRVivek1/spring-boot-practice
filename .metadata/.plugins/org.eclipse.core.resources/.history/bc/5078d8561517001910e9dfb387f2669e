@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package viveksingh.restful.config;
+
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@Configuration
+public class SwaggerConfig {
+
+	
+}

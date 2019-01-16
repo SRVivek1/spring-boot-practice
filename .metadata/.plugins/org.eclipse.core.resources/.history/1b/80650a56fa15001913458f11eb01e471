@@ -1,0 +1,26 @@
+package viveksingh.restful.webservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+@SpringBootApplication
+@ComponentScan(basePackages = { "viveksingh.restful" })
+public class RestWebSericeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RestWebSericeApplication.class, args);
+	}
+
+	// MessageSource bean
+	@Bean
+	public MessageSource getMessageSource() {
+		final ResourceBundleMessageSource r = new ResourceBundleMessageSource();
+		
+		return r;
+	}
+
+}

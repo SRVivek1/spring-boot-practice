@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package viveksingh.restful.bean;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class PersonV2 {
+
+	private Name name;
+}

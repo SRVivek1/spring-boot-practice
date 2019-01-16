@@ -1,0 +1,26 @@
+#DEBUG 
+logging.level.org.org.springframework=DEBUG
+
+
+#Actuator configuration
+
+#Enable all endpoints
+management.endpoints.enabled-by-default=true
+
+#Allow all actuator endpoints for web also
+management.endpoints.web.exposure.include=*
+
+# Allow flyway
+management.endpoint.flyway.enabled=true
+
+#shutdown
+management.endpoint.shutdown.enabled=true
+
+#Beans manager
+management.endpoint.beans.enabled=true
+
+# Add more details to Health API
+management.endpoint.health.show-details=ALWAYS
+
+#Enable management security -- DEPRECATED
+#management.security.enabled=false

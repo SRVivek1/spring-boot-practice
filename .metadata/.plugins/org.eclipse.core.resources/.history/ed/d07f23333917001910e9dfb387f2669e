@@ -1,0 +1,11 @@
+#DEBUG 
+logging.level.org.org.springframework=DEBUG
+
+
+#Actuator configuration
+
+#Enable all endpoints
+management.endpoints.enabled-by-default=true
+
+#Beans manager
+management.endpoint.beans.enabled=true

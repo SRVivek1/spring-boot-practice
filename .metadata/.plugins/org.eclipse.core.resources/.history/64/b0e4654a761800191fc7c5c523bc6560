@@ -1,0 +1,13 @@
+Project
+---------------
+This implementation covers Static and Dynamic content filtering 
+on UserService and PostService respectively.
+
+Static Filtering
+--------------------
+UserService demonstrates Static Filtering using JSON Annotations.
+
+
+Dynamic Filtering
+--------------------
+PostService demonstrates Static Filtering.

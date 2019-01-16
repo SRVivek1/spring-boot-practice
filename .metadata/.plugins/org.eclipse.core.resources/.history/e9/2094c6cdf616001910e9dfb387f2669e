@@ -1,0 +1,12 @@
+package viveksingh.restful.i18n;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldRestController {
+
+	private void sayHello() {
+		// TODO Auto-generated method stub
+
+	}
+}

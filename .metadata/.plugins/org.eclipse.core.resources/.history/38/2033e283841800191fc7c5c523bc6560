@@ -1,0 +1,3 @@
+# Custom security
+spring.security.user.name=viveksingh
+spring.security.user.password=Passw0rd

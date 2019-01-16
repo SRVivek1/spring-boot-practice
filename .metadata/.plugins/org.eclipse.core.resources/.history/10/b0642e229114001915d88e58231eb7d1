@@ -1,0 +1,88 @@
+/**
+ * 
+ */
+package viveksingh.restful.controller;
+
+import java.net.URI;
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import viveksingh.restful.beans.User;
+import viveksingh.restful.dao.UserDaoService;
+import viveksingh.restful.exception.UserNotFoundException;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class UserResource {
+
+	@Autowired
+	UserDaoService userDaoService;
+
+	// - Retrieve all users -- GET /users
+	@GetMapping(path = { "/users" })
+	public List<User> retrieveAllUsers() {
+
+		return userDaoService.findAll();
+	}
+
+	// - Retrieve one user -- GET /users/{id} --> /user/145084
+	@GetMapping(path = { "/users/{id}" })
+	public User retrieveUser(@PathVariable int id) {
+		final User user = userDaoService.findOne(id);
+
+		if (user == null) {
+			throw new UserNotFoundException("User not found. UserId : " + id);
+		}
+
+		// HATEOS
+		
+		
+		return user;
+	}
+
+	// Create and Save a new user'
+	// - Create user -- POST /users
+	@PostMapping(path = { "/users" })
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+
+		final User newUser = userDaoService.save(user);
+
+		// send status code as 'CREATED'
+		// send URI for new user in response
+
+		final URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+				.buildAndExpand(newUser.getId()).toUri();
+
+		return ResponseEntity.created(location).build();
+
+	}
+
+	// Delete user
+	// - Delete one user -- DELETE /users/{id}
+	@DeleteMapping(path = { "/users/{id}" })
+	public void deleteUser(@PathVariable int id) {
+
+		final User user = userDaoService.deleteUser(id);
+
+		if (user == null) {
+			throw new UserNotFoundException("UserId - " + id);
+		}
+
+		// return user;
+
+	}
+}

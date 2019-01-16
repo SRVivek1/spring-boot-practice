@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package viveksingh.restful.bean;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class Person {
+
+	private String fName;
+	
+	private String lName;
+}

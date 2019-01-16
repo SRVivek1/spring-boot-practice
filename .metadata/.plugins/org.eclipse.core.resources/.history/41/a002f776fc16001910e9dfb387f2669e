@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package viveksingh.restful.app;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class UserResource {
+
+	
+}

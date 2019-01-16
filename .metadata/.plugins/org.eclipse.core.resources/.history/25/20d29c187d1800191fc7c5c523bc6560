@@ -1,0 +1,30 @@
+Project
+---------------
+This implementation covers Static and Dynamic content filtering 
+on UserService and PostService respectively.
+
+Static Filtering
+--------------------
+UserService demonstrates Static Filtering using JSON Annotations.
+
+
+Dynamic Filtering
+--------------------
+PostService demonstrates Dynamic Filtering.
+
+Resources
+POJO - @JsonFilter(value = "PostBeanFilter")
+
+Processing
+---------------
+// Start : Dynamic filtering
+
+		final SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter
+				.filterOutAllExcept(new String[] { "id", "message" });
+
+		final FilterProvider filters = new SimpleFilterProvider().addFilter("PostBeanFilter", filter);
+
+		final MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(posts);
+		mappingJacksonValue.setFilters(filters);
+
+		// End : Dynamic filtering

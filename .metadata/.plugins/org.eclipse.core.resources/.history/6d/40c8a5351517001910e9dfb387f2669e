@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package viveksingh.restful.config;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class SwaggerConfig {
+
+}
