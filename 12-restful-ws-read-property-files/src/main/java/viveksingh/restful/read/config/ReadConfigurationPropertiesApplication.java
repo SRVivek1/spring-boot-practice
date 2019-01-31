@@ -1,0 +1,13 @@
+package viveksingh.restful.read.config;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication(scanBasePackages = "viveksingh.restful")
+public class ReadConfigurationPropertiesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ReadConfigurationPropertiesApplication.class, args);
+	}
+
+}

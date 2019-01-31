@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package viveksingh.restful.bean;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class MyServiceConfiguration {
+
+	private int one;
+}

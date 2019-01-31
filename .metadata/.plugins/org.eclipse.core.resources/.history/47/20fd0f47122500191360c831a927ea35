@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+package viveksingh.restful.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@Component
+@ConfigurationProperties(prefix="service-configuration")
+public class ServiceConfiguration {
+
+	private int cone;
+
+	private int c-two;
+	
+	public ServiceConfiguration() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	/**
+	 * @param cone
+	 */
+	public ServiceConfiguration(int cone) {
+		super();
+		this.cone = cone;
+	}
+
+
+
+	/**
+	 * @return the cone
+	 */
+	public int getCone() {
+		return cone;
+	}
+
+	/**
+	 * @param cone the cone to set
+	 */
+	public void setCone(int cone) {
+		this.cone = cone;
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+spring.application.name=configuration-reader
+
+service-configuration.one=111
+service-configuration.two=222
+service-configuration.three=33

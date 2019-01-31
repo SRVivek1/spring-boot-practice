@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package viveksingh.restful.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import viveksingh.restful.bean.MyServiceConfiguration;
+import viveksingh.restful.config.ServiceConfiguration;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class ShowPropertiesController {
+
+	@Autowired
+	ServiceConfiguration ServiceConfiguration;
+	
+	@GetMapping("/myServiceConfig")
+	public MyServiceConfiguration retriveConfiguration() {
+		return new MyServiceConfiguration(ServiceConfiguration.getCone(),222,333);
+	}
+}

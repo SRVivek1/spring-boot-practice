@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package viveksingh.restful.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import viveksingh.restful.bean.User;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@Service
+public class UserDaoService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	/**
+	 * Retrieve all users.
+	 * 
+	 * @return
+	 */
+	public List<User> retrieveUsers() {
+
+		List<User> users = new ArrayList<>();
+
+		System.out.println("userRepository : " + userRepository);
+		
+		userRepository.findAll().forEach(users::add);
+
+		return users;
+	}
+
+}

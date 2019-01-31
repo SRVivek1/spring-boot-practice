@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package viveksingh.restful.dao;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class UserRepository {
+
+}
