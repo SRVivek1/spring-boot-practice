@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.exchange.bean;
+
+import org.springframework.data.repository.CrudRepository;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public interface ExchangeValueRepository extends CrudRepository<ExchangeValue, Long>{
+
+}

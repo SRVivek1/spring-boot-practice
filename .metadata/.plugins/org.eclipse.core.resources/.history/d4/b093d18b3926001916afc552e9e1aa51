@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.exchange.bean;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class ExchangeValueRepository {
+
+}

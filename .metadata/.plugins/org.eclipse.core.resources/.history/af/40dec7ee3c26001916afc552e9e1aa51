@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.conversion.bean;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class CurrencyConversionBean {
+
+}

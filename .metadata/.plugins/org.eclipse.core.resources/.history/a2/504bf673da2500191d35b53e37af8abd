@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.exchange.bean;
+
+import java.math.BigDecimal;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class ExchangeValue {
+
+	private String id;
+	private String from;
+	private String to;
+	private BigDecimal exchangeValue;
+
+}

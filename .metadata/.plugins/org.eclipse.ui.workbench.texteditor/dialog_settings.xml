@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="limits-service" key="selection"/>
+		<item value="quantity" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="quantity"/>
+			<item value="conversionMultiple"/>
+			<item value="ConversionMultiple"/>
 			<item value="limits-service"/>
 			<item value="&lt;!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml --&gt;"/>
 			<item value="PostNotFoundException"/>

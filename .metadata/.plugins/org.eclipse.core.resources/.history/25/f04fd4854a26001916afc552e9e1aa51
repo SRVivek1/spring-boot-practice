@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.conversion.controller;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public interface CurrencyExchangeServiceProxy {
+
+}

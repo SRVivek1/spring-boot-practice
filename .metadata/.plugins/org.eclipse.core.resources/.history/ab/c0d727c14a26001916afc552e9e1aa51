@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.conversion.controller;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@FeignClient(name = "currency-exchange-service", url = "localhost:9000")
+public interface CurrencyExchangeServiceProxy {
+
+}

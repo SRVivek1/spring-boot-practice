@@ -1,0 +1,8 @@
+server.port=9090
+
+spring.application.name=configuration-reader
+
+#Read all these properties using @ConfigurationProperties
+service-configuration.cone=1111
+service-configuration.ctwo=2222
+service-configuration.cthree=3333

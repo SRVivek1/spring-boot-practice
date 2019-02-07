@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.conversion.controller;
+
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import viveksingh.restful.currency.conversion.bean.CurrencyConversionBean;
+import viveksingh.restful.currency.conversion.client.CurrencyExchangeServiceProxy;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class CurrencyConversionController {
+
+	@Autowired
+	private CurrencyExchangeServiceProxy currencyExchangeServiceProxy;
+
+	@GetMapping(value = "/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversionBean convertCurrency(@PathVariable final String from, @PathVariable final String to,
+			@PathVariable final BigDecimal quantity) {
+
+		final Map<String, String> uriVariables = new HashMap<>();
+		uriVariables.put("from", from);
+		uriVariables.put("to", to);
+
+		// Call Currency Exchange Service
+		final ResponseEntity<CurrencyConversionBean> responseEntity = new RestTemplate().getForEntity(
+				"http://localhost:9000/currency-exchange/from/{from}/to/{to}", CurrencyConversionBean.class,
+				uriVariables);
+
+		final CurrencyConversionBean currencyConversionBean = responseEntity.getBody();
+
+		// Update Currency bean
+		currencyConversionBean.setQuantity(quantity);
+		currencyConversionBean
+				.setTotalCalculatedValue(quantity.multiply(currencyConversionBean.getConversionMultiple()));
+
+		return currencyConversionBean;
+	}
+
+	@GetMapping(value = "/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversionBean convertCurrencyFeign(@PathVariable final String from, @PathVariable final String to,
+			@PathVariable final BigDecimal quantity) {
+
+		final CurrencyConversionBean currencyConversionBean 
+			= currencyExchangeServiceProxy.retrieveExchangeValue(from, to);
+
+		// Update Currency bean
+		currencyConversionBean.setQuantity(quantity);
+		currencyConversionBean
+				.setTotalCalculatedValue(quantity.multiply(currencyConversionBean.getConversionMultiple()));
+
+		return currencyConversionBean;
+	}
+}

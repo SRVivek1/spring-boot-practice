@@ -1,0 +1,9 @@
+spring.application.name=currency-exchange-service
+
+server.port=9000
+
+#show sql
+spring.jpa.show-sql=true
+
+#enable h2 console
+spring.h2.console.enabled=true

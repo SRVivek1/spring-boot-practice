@@ -26,6 +26,7 @@ public class SwaggerConfig {
 
 	public static final Contact DEFAULT_CONTACT = new Contact("Vivek Singh", "www.testweb.com",
 			"viveksingh@testweb.com");
+	
 	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Custom Api Documentation", "Custom Api Documentation",
 			"1.0", "urn:Custom tos", DEFAULT_CONTACT, "Default Apache 2.0",
 			"Default http://www.apache.org/licenses/LICENSE-2.0");

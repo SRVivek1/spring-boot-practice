@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.exchange.controller;
+
+import java.math.BigDecimal;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import viveksingh.restful.currency.exchange.bean.ExchangeValue;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+@RestController
+public class CurrencyExchangeController {
+
+	@GetMapping(value = "/currency-exchange/from/{from}/to/{to}")
+	public ExchangeValue retrieveExchangeValue(@PathVariable final String from, @PathVariable final String to) {
+		return new ExchangeValue(1001L, from, to, BigDecimal.valueOf(65));
+	}
+}

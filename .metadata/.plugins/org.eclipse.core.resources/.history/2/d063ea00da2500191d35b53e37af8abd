@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.exchange.service;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class CurrencyExchangeController {
+
+}

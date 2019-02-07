@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package viveksingh.restful.currency.conversion.bean;
+
+import java.math.BigDecimal;
+
+/**
+ * @author vivek_xz2hujv
+ *
+ */
+public class CurrencyConversionBean {
+
+	private Long id;
+	
+	private String from;
+	
+	private String to;
+	
+	private BigDecimal quantity;
+	
+	private BigDecimal conversionMultiple;
+	
+	private BigDecimal totalCalculatedValue;
+	
+	private int servicePort;
+	
+	
+	
+	
+	
+}

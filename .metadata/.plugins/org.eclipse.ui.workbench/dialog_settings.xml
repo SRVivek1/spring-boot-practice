@@ -6,8 +6,8 @@
 	</section>
 	<section name="EditorSelectionDialog">
 		<item value="false" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
-		<item value=".sql" key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION"/>
-		<item value="org.eclipse.ui.DefaultTextEditor" key="EditorSelectionDialog.STORE_ID_DESCR"/>
+		<item value=".properties" key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION"/>
+		<item value="SpringBootPropertyEditor" key="EditorSelectionDialog.STORE_ID_DESCR"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
@@ -32,6 +32,7 @@
 			<item value="org.eclipse.pde.userAssistance"/>
 			<item value="org.eclipse.wst.web.ui"/>
 			<item value="org.eclipse.wst.XMLCategory"/>
+			<item value="org.eclipse.ui.Examples"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">
